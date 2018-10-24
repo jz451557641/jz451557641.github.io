@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dv {width: 100px;height: 100px;}
+        #box {
+            width: 400px;
+            height: 100px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>This is Chinese Zodiac Time:</h1>
+        <h2 id="hour-name">Time for Rat</h2>
+        <div id="magic-box">
+            <h2 id="magic-title">
+                There is a magic box changing its backgroud
+            </h2>
+            <div id="box" ></div>
+        </div>
+        
+    </div>
+
+</body>
+<script>
+    window.onload=function(){
+        var chineseZodiacList = [
+            "Rat",
+            "Ox",
+            "Tiger",
+            "Hare",
+            "Dragon",
+            "Snake",
+            "Horse",
+            "Sheep",
+            "Monkey",
+            "Rooster",
+            "Dog",
+            "Boar"
+        ]
+        
+        var bg = document.getElementById("box");
+        bg.style.backgroundColor =  "rgb(0,0,0)";
+        
+        var now = new Date();
+        var hours = now.getHours();
+        
+        var hourName = document.getElementById("hour-name");
+        console.log();
+
+        hourName.innerText = "Current time is " + now
+            + ".\nIt's " 
+            + chineseZodiacList[hours % 12]
+            + "'s Hour";
+
+        // changed every ten seconds
+        setInterval(function(){
+
+            var now = new Date();
+            var hours = now.getHours();
+            // hourName.innerText = 
+            var hourName = document.getElementById("hour-name");
+
+            hourName.innerText = "Current time is " + now
+            + ".\nIt's " 
+            + chineseZodiacList[hours % 12]
+            + "'s Hour";
+            
+            randomChangeBackgroud();
+        
+            function randomChangeBackgroud(){
+                var arrRandNumber = [
+                    getRandomNumber(0,255),
+                    getRandomNumber(0,255),
+                    getRandomNumber(0,255)   
+                ];
+                bg.style.backgroundColor='rgb('+arrRandNumber[0]+','+arrRandNumber[1]+','+arrRandNumber[2]+')'
+                
+                function getRandomNumber(rMin,rMax){
+                    var cha = rMax-rMin;
+                    var rand = Math.random();
+                    return (rMin+Math.round(cha*rand))
+                }
+            }
+
+        
+        },1000)
+        
+    };
+
+</script>
+</html>

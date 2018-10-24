@@ -1,0 +1,63 @@
+#left-column {
+    color: white;
+    width: 48%;
+    padding : 1%;
+    display: inline;
+    float: left;   
+    background-color: blue;
+}
+
+#right-column {
+    color: white;
+    width: 48%;
+    padding : 1%;
+    float: right;
+    background-color: red;
+}
+
+#footer {
+    color: white;
+    height: 50px;
+    width: 100%;
+    position:absolute;
+    bottom:0px;
+    text-align: center;
+    transition: color 1s;
+    background-color: green;
+}
+
+.face {
+    position: fixed;
+    float: right;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;     
+    background-color:purple;      
+    border-radius: 100%;      
+    /* -moz-border-radius: 50%;      
+    -webkit-border-radius: 50%; */
+}
+.eye {
+    position: fixed;
+    bottom: 75px;
+    width: 10px;
+    height: 10px;   
+    border-radius: 100%;   
+    background-color:black; 
+}
+.eye-left {
+    right: 85px;    
+}
+
+.eye-right {
+    right: 45px;
+}
+.mouth {
+    position: fixed;
+    bottom: 55px;
+    right: 28px;
+    height: 5px;
+    width: 85px;
+    background-color: black;
+}
