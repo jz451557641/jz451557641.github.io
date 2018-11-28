@@ -1,30 +1,3 @@
 h1 {
   color:rgb(255, 0, 0);
 }
-body {
-    background-color: #FFAA00;
-    font-family: "Merriweather";
-}
-
-#header {
-    color: yellow;
-}
-
-h1 {
-    border: 3px dotted green;
-    background-color: white;
-    color: pink;
-}
-
-p {
-    line-height: 40px;
-    letter-spacing: 20px;
-}
-
-.phone-number {
-    font-weight: bold;
-}
-
-.international {
-    font-style: italic;
-}
