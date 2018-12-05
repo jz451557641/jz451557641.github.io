@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Way to Mars</title>
+    <link rel="stylesheet" type="text/css" href="../css/page.css">
+  <head>
+
+  <body>
+
+    <h1>You only have one chance, are you sure?</h1>
+    <img src="../img/run.gif" style="width: 80px;display: none;position: absolute;z-index: -100;" id="run">
+
+    <div>
+        <a href="javascript:void(0)" onclick="go()">Yes</a>
+      <a href="../index.html">No</a>
+    </div>
+    <div style="margin-top: 350px;margin-left: -182px;display: none" id="rocket">
+        <img src="../img/rocket .gif" style="width: 200px;position: absolute" id="fly">
+    </div>
+  </body>
+  <script>
+      var myPage = true;
+      var rocket = document.getElementById('rocket');
+      function rocketFly () {
+        setInterval(function () {
+          rocket.style.marginTop = rocket.style.marginTop.split('p')[0] - 2 + 'px';
+          if (rocket.style.marginTop.split('p')[0] == 0) {
+            window.location.href='mars 2.html';
+          }
+        },10)
+      }
+      function go() {
+        rocket.style.display = 'block'
+        rocketFly ();
+      }
+  </script>
+  <script src="../js/animation.js"></script>
+</html>

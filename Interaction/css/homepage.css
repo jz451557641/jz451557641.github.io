@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background: url("../img/bgm.jpg");
+}
+h1 {
+    color:rgb(255, 0, 0);
+  }
+p {
+    color: white;
+}
+.tip {
+    text-align: left;
+}
+.welcome {
+    margin-left: -123px;
+}
+div a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+div {
+    font-size: 20px;
+    margin-top: 29px;
+    margin-left: -102px;
+}
