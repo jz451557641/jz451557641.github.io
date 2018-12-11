@@ -22,6 +22,10 @@
     float: right;
 }
 .assignments a {
-    
+
     display: block;
+}
+
+body {
+    background-color: #080808
 }

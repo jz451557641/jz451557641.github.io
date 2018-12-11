@@ -1,8 +1,9 @@
 var cueHour = getCurHour();
 var curColor = getCurColor();
 
+// 获取数组中的颜色
 function getColorBySeconds (color_arr, curHour, curSecond) {
-	
+	// console.log('--color_arr[curHour][curSecond].length---', color_arr[curHour][curSecond].length);
 	if (color_arr[curHour][curSecond].length != 7) {
 		if (curSecond == 0) {
 			curSecond = DEFAULT_NUM - 1;
@@ -28,12 +29,12 @@ function getCurColor () {
 			hour = time.getHours(),
 			m = time.getMinutes(),
 			s = time.getSeconds();
-
+	
 	var _hour = format24To12(hour) + 1,
 			_now_seconds = m*60 + s;
 
 	var secondWhichColor = getSecondsIn(_now_seconds);
-
+			
 	var curColor = getColorBySeconds(color_arr, _hour.toString(), secondWhichColor);
 
 	return curColor;
@@ -73,3 +74,7 @@ function setHour () {
 	// console.log('--cueHour--', cueHour);
 	// $('body').css('backgroundColor', curColor);
 }
+
+
+
+

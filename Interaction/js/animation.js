@@ -11,9 +11,9 @@ for (var i = 0; i < a.length; i++) {
     a[i].addEventListener('mouseenter', function () {
     isEnter = true;
     if(myPage) {
-        run.src = '../img/staticRun.jpg'
+        run.src = '../img/indexRun.gif'
     } else {
-        run.src = 'img/indexRun.jpg'
+        run.src = 'img/indexRun.gif'
     }
     })
 a[i].addEventListener('mouseleave', function () {

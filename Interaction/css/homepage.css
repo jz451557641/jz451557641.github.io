@@ -1,6 +1,9 @@
 body {
     text-align: center;
-    background: url("../img/bgm.jpg");
+    background: url("../img/space.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1 {
     color:rgb(255, 0, 0);

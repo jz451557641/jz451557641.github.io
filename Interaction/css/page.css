@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    background: url("../img/enter.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 div {
     margin-top: 10px;
@@ -10,3 +13,5 @@ div a {
     margin-left: 5px;
     margin-right: 5px;
 }
+h1 {
+    color:rgb(255, 0, 0);

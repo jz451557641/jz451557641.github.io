@@ -90,63 +90,67 @@ for(var i=0;i<60;i++){
 	angle+=6/180*Math.PI;
 }
 
-function Pointer(){
+if (SHOW_TIME_LINE) {
+	function Pointer(){
 
-	var p_type = [['#000',130,1],['#fc9a13',100,2],['fc9a13',120,3]];
+		var p_type = [['#000',130,1],['#fc9a13',100,2],['fc9a13',120,3]];
 
-	function drwePointer(type,angle){
+		function drwePointer(type,angle){
 
-		type = p_type[type];
+			type = p_type[type];
 
-		angle = angle*Math.PI*2 - 90/180*Math.PI; 
+			angle = angle*Math.PI*2 - 90/180*Math.PI; 
 
-		var length= type[1];
+			var length= type[1];
 
-		p_context.beginPath();
+			p_context.beginPath();
 
-		p_context.lineWidth = type[2];
+			p_context.lineWidth = type[2];
 
-		p_context.strokeStyle = type[0];
+			p_context.strokeStyle = type[0];
 
-		p_context.moveTo(width/2,height/2); 
+			p_context.moveTo(width/2,height/2); 
 
-		p_context.lineTo(width/2 + length*Math.cos(angle),height/2 + length*Math.sin(angle)); 
+			p_context.lineTo(width/2 + length*Math.cos(angle),height/2 + length*Math.sin(angle)); 
 
-		p_context.stroke();
+			p_context.stroke();
+
+		}
+
+		setInterval(function (){
+
+			p_context.clearRect(0,0,height,width);
+
+			var time = new Date();
+
+			var h = time.getHours();
+
+			var m = time.getMinutes();
+
+			var s = time.getSeconds(); 
+
+			h = h>12?h-12:h;
+
+			h = h+m/60; 
+
+			h=h/12;
+
+			m=m/60;
+
+			s=s/60;
+
+			drwePointer(1,m);
+
+			drwePointer(2,h); 
+
+			drwePointer(0,s);
+
+		},500);
 
 	}
-
-	setInterval(function (){
-
-		p_context.clearRect(0,0,height,width);
-
-		var time = new Date();
-
-		var h = time.getHours();
-
-		var m = time.getMinutes();
-
-		var s = time.getSeconds(); 
-
-		h = h>12?h-12:h;
-
-		h = h+m/60; 
-
-		h=h/12;
-
-		m=m/60;
-
-		s=s/60;
-
-		drwePointer(1,m);
-
-		drwePointer(2,h); 
-
-		drwePointer(0,s);
-
-	},500);
-
 }
+
+
 
 var p = new Pointer();
 
