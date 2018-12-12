@@ -25,7 +25,12 @@
 
     display: block;
 }
-
 body {
-    background-color: #080808
+  text-align: center;
+  background: url("giphy.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+h1 {
+    color:#0be6c3
