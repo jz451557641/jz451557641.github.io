@@ -1,9 +1,8 @@
 body {
     text-align: center;
+    background-color: #2d2d2d;
 }
 img {
     margin-top: 20px;
     width: 800px;
 }
-h1 {
-    color:rgb(255, 0, 0);
