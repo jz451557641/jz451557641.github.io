@@ -13,16 +13,38 @@
 
         <p>You are in your spaceship, where do you want to go?</p>
 
-        <div>
-            <a href="html/earth 1.html">1.Earth</a>
-            <a href="html/mars 1.html">2.Mars</a>
-            <a href="html/moon 1.html">3.Moon</a>
-            <a href="html/uranus 1.html">4.Uranus</a>
+        <div class="nav">
+            <img class="earth" src="img/earth.gif">
+            <img class="mars" src="img/mars.gif">
+            <img class="moon" src="img/moon.gif">
+            <img class="Uranus" src="img/Uranus.gif">
         </div>
         <img src="img/run.gif" style="width: 80px;display: none;position: absolute;z-index: -100;" id="run">
     </body>
     <script>
         var myPage = false;
+        var nav = document.querySelectorAll('.nav img');
+        var run = document.getElementById('run');
+        var isEnter = false;
+        document.addEventListener('mousemove', function (e) {
+            if (isEnter) return
+            run.style.display = 'block';
+            run.style.top = e.clientY + 'px';
+            run.style.left = e.clientX - 2 + 'px';
+         });
+        for (var i = 0; i < nav.length; i++) {
+            nav[i].addEventListener('mouseenter', function () {
+            isEnter = true;
+                run.src = 'img/indexRun.gif'
+            })
+            nav[i].addEventListener('mouseleave', function () {
+            isEnter = false;
+                run.src = 'img/run.gif'
+            })
+            nav[i].addEventListener('click', function() {
+                var name = event.target.className;
+                window.location.href = 'html/' + name + ' 1.html'
+            });
+        }
     </script>
-    <script src="js/animation.js"></script>
 </html>

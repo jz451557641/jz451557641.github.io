@@ -26,3 +26,25 @@ div {
     margin-top: 29px;
     margin-left: -102px;
 }
+.nav img {
+    width: 180px;
+    height: 180px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+.nav {
+    width: 1000px;
+    margin: 0px auto;
+}
+.mars {
+    margin-top: 300px;
+}
+.earth {
+    margin-bottom: 300px;
+}
+.moon {
+    margin-bottom: 250px;
+}
+.uranus {
+    margin-bottom: 50px;
+}
